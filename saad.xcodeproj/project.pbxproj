@@ -14,6 +14,10 @@
 		934C3EEE2236506800B48840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934C3EEC2236506800B48840 /* LaunchScreen.storyboard */; };
 		934C3EF92236506800B48840 /* saadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C3EF82236506800B48840 /* saadTests.swift */; };
 		934C3F042236506800B48840 /* saadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C3F032236506800B48840 /* saadUITests.swift */; };
+		934C3F122236522D00B48840 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C3F112236522D00B48840 /* SecondViewController.swift */; };
+		934C3F142236581C00B48840 /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 934C3F132236581C00B48840 /* logo.svg */; };
+		934C3F162236588400B48840 /* saaya.png in Resources */ = {isa = PBXBuildFile; fileRef = 934C3F152236588400B48840 /* saaya.png */; };
+		934C3F18223680D400B48840 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 934C3F17223680D300B48840 /* logo2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		934C3EFF2236506800B48840 /* saadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = saadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		934C3F032236506800B48840 /* saadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saadUITests.swift; sourceTree = "<group>"; };
 		934C3F052236506800B48840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		934C3F112236522D00B48840 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		934C3F132236581C00B48840 /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = logo.svg; path = "../../../Documents/Sayyya Web NEW/saaya_web/src/static/images/logo.svg"; sourceTree = "<group>"; };
+		934C3F152236588400B48840 /* saaya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = saaya.png; path = "../../../Documents/Sayyya Web NEW/saaya_web/src/static/images/saaya.png"; sourceTree = "<group>"; };
+		934C3F17223680D300B48840 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../Downloads/logo2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,16 @@
 		934C3EE22236505200B48840 /* saad */ = {
 			isa = PBXGroup;
 			children = (
+				934C3F17223680D300B48840 /* logo2.png */,
+				934C3F152236588400B48840 /* saaya.png */,
+				934C3F132236581C00B48840 /* logo.svg */,
 				934C3EE32236505200B48840 /* AppDelegate.swift */,
 				934C3EE52236505200B48840 /* ViewController.swift */,
 				934C3EE72236505300B48840 /* Main.storyboard */,
 				934C3EEA2236506700B48840 /* Assets.xcassets */,
 				934C3EEC2236506800B48840 /* LaunchScreen.storyboard */,
 				934C3EEF2236506800B48840 /* Info.plist */,
+				934C3F112236522D00B48840 /* SecondViewController.swift */,
 			);
 			path = saad;
 			sourceTree = "<group>";
@@ -230,8 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				934C3EEE2236506800B48840 /* LaunchScreen.storyboard in Resources */,
+				934C3F18223680D400B48840 /* logo2.png in Resources */,
+				934C3F162236588400B48840 /* saaya.png in Resources */,
 				934C3EEB2236506700B48840 /* Assets.xcassets in Resources */,
 				934C3EE92236505300B48840 /* Main.storyboard in Resources */,
+				934C3F142236581C00B48840 /* logo.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934C3F122236522D00B48840 /* SecondViewController.swift in Sources */,
 				934C3EE62236505200B48840 /* ViewController.swift in Sources */,
 				934C3EE42236505200B48840 /* AppDelegate.swift in Sources */,
 			);
