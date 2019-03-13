@@ -1,0 +1,6 @@
+framework module Pods_saad {
+  umbrella header "Pods-saad-umbrella.h"
+
+  export *
+  module * { export * }
+}

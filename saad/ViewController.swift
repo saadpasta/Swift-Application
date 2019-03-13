@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var errorText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,17 +60,43 @@ class ViewController: UIViewController {
             }
             
             do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
                 //create json object from data
-                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                    print(json)
-                    // handle json...
+                print(json)
+                if let myDictionary = json
+                {
+                    if (myDictionary["non_field_errors"] != nil){
+                        var error = myDictionary["non_field_errors"]
+                        print(" Error :\(error)")
+                        
+                        DispatchQueue.main.async {
+                            // UIView usage
+                            self.errorText.text = "Unable to log in with provided credentials"
+                            self.errorText.isHidden = false
+                        }
+                 
+                    }
+                    else{
+                        UserDefaults.standard.set(json, forKey: "user")
+                        DispatchQueue.main.async {
+                            // UIView usage
+                            self.errorText.isHidden = true
+                            let homeView = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+                            self.navigationController?.pushViewController(homeView, animated: true)
+                            
+                        }
+                     
+
+                        print("Login Succesfull")
+                    }
                 }
             } catch let error {
-                print(error.localizedDescription)
+                print("error",error.localizedDescription)
             }
         })
         task.resume()
     }
+
     
 }
 

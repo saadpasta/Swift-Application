@@ -12,8 +12,13 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated:true);
 
         // Do any additional setup after loading the view.
+        let user : AnyObject? = UserDefaults.standard.object(forKey: "user") as AnyObject
+
+        print("Hello User\(user?.value(forKey: "token"))")
+
     }
     
 
